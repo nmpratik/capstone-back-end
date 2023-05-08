@@ -1,0 +1,48 @@
+### Create New Event
+POST http://localhost:8080/admin/newevent HTTP/1.1 
+Content-Type: application/json
+
+{ 
+"description":"Moto cross Event",
+"enddate": "2023-05-14",
+"location": "Banglore",
+"startdate": "2023-05-14",
+"time": "13:00",
+"title": "Bikerzzz"
+}
+
+### Get All Craeted Events
+GET http://localhost:8080/admin/events 
+
+
+### Get Event By Passing ID
+GET http://localhost:8080/admin/events/1
+
+
+### Delete Event By ID
+DELETE http://localhost:8080/admin/events/1
+
+
+### Update Event 
+PUT http://localhost:8080/admin/updateevent HTTP/1.1 
+Content-Type: application/json
+
+{
+ "id":2,
+ "description":"Moto cross Event",
+ "enddate": "2023-05-14",
+ "location": "Manglore",
+ "startdate": "2023-05-14",
+ "time": "13:00",
+ "title": "Bikerzzz"
+}
+
+### Set tickets
+
+POST http://localhost:8080/admin/events/1/tickets HTTP/1.1 
+Content-Type: application/json
+
+{
+   "type":"asd",
+   "price":200
+}
